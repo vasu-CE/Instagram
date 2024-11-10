@@ -11,7 +11,7 @@ const useGetAllMessage = () => {
         const fetchAllMessage = async () => { 
             try{
                 // console.log(`${selectedUser._id}`);
-                const res = await axios.get(`http://localhost:5000/api/v1/message/all/${selectedUser._id}` , {withCredentials : true})
+                const res = await axios.get(`https://instagram-vubs.onrender.com/api/v1/message/all/${selectedUser._id}` , {withCredentials : true})
                 // console.log("done");
                 
                 if (res.data.success) {

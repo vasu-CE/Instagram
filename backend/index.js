@@ -8,7 +8,6 @@ import postRoute from "./routes/postRoute.js";
 import messageRoute from "./routes/messageRoute.js"
 import {app , server} from './socket/socket.js'
 import path from "path"
-import { log } from "console";
 
 dotenv.config({});
 const PORT = process.env.PORT || 3000;
@@ -22,7 +21,7 @@ app.use(cookieParser());
 app.use(urlencoded({extended:true}));
 
 const corsOption = {
-    origin:'http://localhost:5173',
+    origin:process.env.URL,
     // credential:true
     credentials:true
 }

@@ -8,7 +8,7 @@ const useSuggestedUsers = () => {
     useEffect(() => {
         const fetchSuggestedUsers = async () => {
             try{
-                const res = await axios.get('http://localhost:5000/api/v1/user/suggested' , {withCredentials : true})
+                const res = await axios.get('https://instagram-vubs.onrender.com/api/v1/user/suggested' , {withCredentials : true})
                 
                 if(res.data.success){
                     // console.log(res.data);
