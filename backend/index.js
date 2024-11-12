@@ -27,12 +27,6 @@ const corsOption = {
 }
 app.use(cors(corsOption));
 
-app.get('/' , (req,res)=>{
-    return res.status(200).json({
-        message:'I am vasu',
-        success:true
-    })
-})
 // app.get('/register',userRoute);
 app.use("/api/v1/user" , userRoute);
 app.use("/api/v1/post" , postRoute);
