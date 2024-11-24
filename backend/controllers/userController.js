@@ -7,6 +7,7 @@ import jwt from "jsonwebtoken";
 import upload from "../middlewares/multer.js";
 import postModel from "../models/PostModel.js"
 import sharp from "sharp";
+
 export const register = async (req,res) => {
     try{
         const {userName, email ,password} = req.body;
